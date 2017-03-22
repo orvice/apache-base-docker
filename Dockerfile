@@ -12,9 +12,13 @@ RUN apt-get update && apt-get install -y \
 	libpng12-dev \
 	libpq-dev \
 	libxml2-dev \
+	zlib1g-dev \
 	&& rm -rf /var/lib/apt/lists/* && \
     docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/  &&  \
-    docker-php-ext-install gd
+    docker-php-ext-install gd \
+    && docker-php-ext-install zip \
+    && pecl install mongodb \
+    && docker-php-ext-enable mongodb
 
 # set recommended PHP.ini settings
 # see https://secure.php.net/manual/en/opcache.installation.php
