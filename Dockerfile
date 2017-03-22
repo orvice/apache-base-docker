@@ -37,15 +37,8 @@ RUN a2enmod rewrite
 RUN rm /etc/apache2/sites-enabled/000-default.conf
 COPY 000-default.conf /etc/apache2/sites-enabled/
 
- 
-VOLUME /var/www/html
-
-
 
 WORKDIR /var/www/html
-
-
-
 
 
 #COPY docker-entrypoint.sh /entrypoint.sh
