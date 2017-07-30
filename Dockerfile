@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
     docker-php-ext-install gd \
     && docker-php-ext-install zip \
     && docker-php-ext-install pdo pdo_mysql \
+    && docker-php-ext-install bcmath \
     && pecl install mongodb \
     && docker-php-ext-enable mongodb
 
