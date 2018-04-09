@@ -1,4 +1,4 @@
-FROM php:7.2-apache
+FROM php:7.0-apache
 MAINTAINER orvice<orvice@orx.me>
 RUN apt-get update && apt-get install -y \
 	bzip2 \
