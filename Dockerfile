@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
 	libldap2-dev \
 	libmcrypt-dev \
 	libmemcached-dev \
-	libpng12-dev \
+	libpng-dev \
 	libpq-dev \
 	libxml2-dev \
 	zlib1g-dev \
