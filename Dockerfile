@@ -1,4 +1,4 @@
-FROM php:7.1-apache
+FROM php:5.6-apache
 MAINTAINER orvice<orvice@orx.me>
 RUN apt-get update && apt-get install -y \
 	bzip2 \
@@ -35,18 +35,3 @@ RUN { \
 
 # Enable Rewrite
 RUN a2enmod rewrite
-
-RUN rm /etc/apache2/sites-enabled/000-default.conf
-COPY 000-default.conf /etc/apache2/sites-enabled/
-
-
-WORKDIR /var/www/html
-
-
-#COPY docker-entrypoint.sh /entrypoint.sh
-
-
-EXPOSE 80
-
-#ENTRYPOINT ["/entrypoint.sh"]
-CMD ["apache2-foreground"]
