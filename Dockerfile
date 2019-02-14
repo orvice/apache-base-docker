@@ -20,7 +20,8 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install pdo pdo_mysql \
     && docker-php-ext-install bcmath \
     && pecl install mongodb \
-    && docker-php-ext-enable mongodb
+    && docker-php-ext-enable mongodb \
+    && docker-php-ext-install sockets
 
 # set recommended PHP.ini settings
 # see https://secure.php.net/manual/en/opcache.installation.php
