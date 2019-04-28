@@ -1,5 +1,7 @@
 FROM php:7.2-apache
-MAINTAINER orvice<orvice@orx.me>
+
+LABEL maintainer="orvice"
+
 RUN apt-get update && apt-get install -y \
 	bzip2 \
 	libcurl4-openssl-dev \
