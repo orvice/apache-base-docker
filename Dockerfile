@@ -3,7 +3,7 @@ FROM php:7.4-apache
 LABEL maintainer="orvice"
 
 RUN apt-get update && apt-get install -y \
-	bzip2 \
+	bzip2 libzip-dev zip \
 	libcurl4-openssl-dev \
 	libfreetype6-dev \
 	libicu-dev \
