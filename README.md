@@ -1,11 +1,11 @@
 ## Pull
 
 ```
-docker pull orvice/apache-base
+docker pull quay.io/orvice/apache-base
 ```
 
 ## Usage
 
 ```
-FROM orvice/apache-base
+FROM quay.io/orvice/apache-base
 ```
