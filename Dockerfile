@@ -2,6 +2,9 @@ FROM php:7.4-apache
 
 LABEL maintainer="orvice"
 
+# Install Composer
+COPY --from=composer /usr/bin/composer /usr/bin/composer
+
 RUN apt-get update && apt-get install -y \
 	bzip2 libzip-dev zip \
 	libcurl4-openssl-dev \
