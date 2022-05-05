@@ -1,11 +1,22 @@
 ## Pull
 
 ```
-docker pull quay.io/orvice/apache-base
+docker pull ghcr.io/orvice/apache-base-docker:master
+```
+
+## docker-compose
+
+```
+  web:
+    image: ghcr.io/orvice/apache-base-docker:master
+    restart: always
+    volumes:
+      - /var/data/www:/var/www/html
+    container_name: web
 ```
 
 ## Usage
 
 ```
-FROM quay.io/orvice/apache-base
+FROM ghcr.io/orvice/apache-base-docker:master
 ```
