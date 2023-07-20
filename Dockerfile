@@ -6,7 +6,7 @@ LABEL maintainer="orvice"
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 RUN apt-get update && apt-get install -y \
-	bzip2 libzip-dev zip \
+	bzip2 libzip-dev zip curl \
 	libcurl4-openssl-dev \
 	libfreetype6-dev \
 	libicu-dev \
@@ -44,6 +44,8 @@ RUN a2enmod rewrite
 RUN rm /etc/apache2/sites-enabled/000-default.conf
 COPY 000-default.conf /etc/apache2/sites-enabled/
 
+COPY install.sh .
+RUN chmod +x install.sh && ./install.sh
 
 WORKDIR /var/www/html
 
