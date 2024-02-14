@@ -1,4 +1,4 @@
-FROM php:8-apache
+FROM php:7-apache
 
 LABEL maintainer="orvice"
 
