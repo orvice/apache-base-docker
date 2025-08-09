@@ -49,10 +49,6 @@ RUN chmod +x install.sh && ./install.sh
 
 WORKDIR /var/www/html
 
-
-#COPY docker-entrypoint.sh /entrypoint.sh
-
-
 EXPOSE 80
 
 #ENTRYPOINT ["/entrypoint.sh"]
